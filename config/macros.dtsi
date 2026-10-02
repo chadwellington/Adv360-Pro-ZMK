@@ -1,3 +1,34 @@
+// START custom macros
+/*
+  CTRL+WIN+(left/right)
+  to trigger desktop swap combo in a single keypress
+*/
+macro_desktopleft: macro_desktopleft{
+compatible = "zmk,behavior-macro";
+label = "macro_desktopleft";
+#binding-cells = <0>;
+bindings
+    = <&macro_press &kp LCTRL>
+    , <&macro_press &kp LWIN>
+    , <&macro_tap &kp LEFT>
+    , <&macro_release &kp LCTRL>
+    , <&macro_release &kp LWIN>
+    ;
+};
+macro_desktopright: macro_desktopright{
+compatible = "zmk,behavior-macro";
+label = "macro_desktopright";
+#binding-cells = <0>;
+bindings
+    = <&macro_press &kp LCTRL>
+    , <&macro_press &kp LWIN>
+    , <&macro_tap &kp RIGHT>
+    , <&macro_release &kp LCTRL>
+    , <&macro_release &kp LWIN>
+    ;
+};
+// END custom macros
+
   macro_quotes: macro_quotes {
     compatible = "zmk,behavior-macro";
     label = "macro_quotes";
